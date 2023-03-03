@@ -11,4 +11,5 @@ export class UserResolver {
   user(@Args('id') id: number) {
     return this.userService.findByID(id);
   }
+
 }

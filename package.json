@@ -33,7 +33,8 @@
     "apollo-server-express": "^3.11.1",
     "graphql": "^16.6.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^7.2.0"
+    "rxjs": "^7.2.0",
+    "class-validator": "0.14.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.6.0",
