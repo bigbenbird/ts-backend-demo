@@ -15,7 +15,7 @@ model User {
   id    Int    @id @default(autoincrement())
   name  String
   email String @unique
-  documents Document[]
+  documents Document[] 
 
   @@map("users")
 }
@@ -25,7 +25,7 @@ model Document{
   title String 
   text_body String
   author User @relation(fields: [user_id], references: [id])
-  user_id Int    @unique
+  user_id Int    
   create_date DateTime @default(now())
   updated_date DateTime @updatedAt
 

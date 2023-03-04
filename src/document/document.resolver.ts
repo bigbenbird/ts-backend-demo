@@ -10,8 +10,8 @@ export class DocumentResolver {
   constructor(private readonly documentService: DocumentService) {}
 
   @Query(() => [Document])
-  documents(@Args('id') id: number) {
-    return this.documentService.findDocumentByUserId(id);
+  documents(@Args('user_id') user_id: number) {
+    return this.documentService.findDocumentByUserId(user_id);
   }
 
   @Mutation(returns => Document)

@@ -12,4 +12,7 @@ export class UserResolver {
     return this.userService.findByID(id);
   }
 
+  //@Query(() => [Document])
+  //user_document(@Args)
+
 }

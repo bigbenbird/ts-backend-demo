@@ -17,7 +17,7 @@ export class Document implements DocumentModel {
   author: string;
 
   @Field()
-  userId: number;
+  user_id: number;
 
   @Field()
   create_date: Date;

@@ -2,7 +2,33 @@
 # THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
 # ------------------------------------------------------
 
+"""
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
+"""
+scalar DateTime
+
+type Document {
+  author: String!
+  create_date: DateTime!
+  id: Float!
+  text_body: String!
+  title: String!
+  updated_date: DateTime!
+  user_id: Float!
+}
+
+type Mutation {
+  saveDocument(new_document_data: NewDocumentInput!): Document!
+}
+
+input NewDocumentInput {
+  text_body: String
+  title: String!
+  user_id: Float!
+}
+
 type Query {
+  documents(user_id: Float!): [Document!]!
   user(id: Float!): User!
 }
 

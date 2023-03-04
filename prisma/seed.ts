@@ -9,6 +9,11 @@ async function seed() {
       data: {
         name: faker.name.fullName(),
         email: faker.internet.email(),
+        documents: {
+          create:[
+            {title: faker.lorem.sentence(), text_body: faker.lorem.sentences()},
+          ],
+        }
       },
     }),
   );

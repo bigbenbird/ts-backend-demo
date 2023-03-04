@@ -1,4 +1,5 @@
 import { Field, InputType } from '@nestjs/graphql';
+import { isNullableType } from 'graphql';
 
 @InputType()
 export class NewDocumentInput{
