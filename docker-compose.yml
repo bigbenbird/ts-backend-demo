@@ -13,6 +13,8 @@ services:
       - postgres:/var/lib/postgresql/data
     ports:
       - '5432:5432'
+    networks:
+      - web_network
 
   web_api:
     build:
@@ -24,6 +26,13 @@ services:
     ports:
       - '3000:3000'
       - '5555:5555'
+    networks:
+      - web_network
 
 volumes:
   postgres:
+
+
+networks:
+  web_network:
+    driver: bridge
