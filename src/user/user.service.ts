@@ -13,4 +13,18 @@ export class UserService {
       },
     });
   }
+
+  findAllDocument(id: number) {
+    const ret = this.prismaService.user.findUniqueOrThrow({
+      where: {
+        id, 
+      },
+      select: {
+        documents: true 
+        
+      }
+    }).then(value => {return value['documents']});
+
+    return ret
+  }
 }

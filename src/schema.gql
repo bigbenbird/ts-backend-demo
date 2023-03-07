@@ -30,6 +30,7 @@ input NewDocumentInput {
 type Query {
   documents(user_id: Float!): [Document!]!
   user(id: Float!): User!
+  user_document(id: Float!): [Document!]!
 }
 
 type User {
